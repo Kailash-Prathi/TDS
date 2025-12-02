@@ -16,8 +16,40 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Slide 1
+						My Email address is 24f3001410@ds.study.iitm.ac.in
+					</textarea>
+				</section>
+				<section>
+					Slide 2
+					<p class="fragment highlight-red">This is Current slide.</p>
+				</section>
+				<section>
+					<pre><code class="python" data-line-numbers="1-2|4,6-7|9">
+					import pandas as pd
+					import seaborn as sns
+
+					# Load data
+					data = pd.read_csv('data.csv')
+
+					# Create visualization
+					sns.scatterplot(data=data, x='x', y='y')
+
+					print(data.head())
+					</code></pre>
+				</section>
+				<section>
+					Section 4
+					<h2>Statistical Formula</h2>
+					\[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
+				</section>
+				<section>
+					<h2>Slide Title</h2>
+					<p>Visible content</p>
+					<aside class="notes">Speaker notes visible in presenter view</aside>
+				</section>;
 			</div>
 		</div>
 
@@ -25,15 +57,16 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				controlsTutorial: true,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
 			});
 		</script>
 	</body>
