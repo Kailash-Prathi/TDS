@@ -1,77 +1,88 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+        <title>Q3 Financial Earnings Report</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/league.css"> <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-					<textarea data-template>
-						## Slide 1
-						My Email address is 24f3001410@ds.study.iitm.ac.in
-					</textarea>
-				</section>
-				<section>
-					Slide 2
-					<p class="fragment highlight-red">This is Current slide.</p>
-					<p class="fragment fade-out">Fade out</p>
-					<ul>
-						<li class="fragment">First point</li>
-						<li class="fragment">Second point</li>
-						<li class="fragment fade-up">Animated point</li>
-					</ul>
-				</section>
-				<section>
-					<pre><code class="python" data-trim data-noescape data-line-numbers="1-2|4,6-7|9">
-				import pandas as pd
-				import seaborn as sns
+                <section data-markdown>
+                    <textarea data-template>
+                        ## Q3 Earnings Report
+                        ### Financial Technology Division
 
-				# Load data
-				data = pd.read_csv('data.csv')
+                        **Consultant:** Technical Lead
+                        **Contact:** 24f3001410@ds.study.iitm.ac.in
+                    </textarea>
+                </section>
 
-				# Create visualization
-				sns.scatterplot(data=data, x='x', y='y')
-					</code></pre>
-				</section>
-				<section>
-					Section 4
-					<h2>Statistical Formula</h2>
-					\[P(A|B) = \frac{P(B|A)P(A)}{P(B)}\]
-				</section>
-				<section>
-					<h2>Slide Title</h2>
-					<p>Visible content</p>
-					<aside class="notes">Speaker notes visible in presenter view</aside>
-				</section>;
-			</div>
-		</div>
+                <section>
+                    <h3>Quarterly Highlights</h3>
+                    <p>Performance against key metrics:</p>
+                    <ul>
+                        <li class="fragment fade-up">Revenue Growth: <span style="color: green">15% YoY ⬆</span></li>
+                        <li class="fragment fade-up">Operating Margin: <span style="color: green">22% ⬆</span></li>
+                        <li class="fragment fade-up">Customer Acquisition Cost: <span style="color: red">-5% ⬇</span></li>
+                        <li class="fragment highlight-blue">New Tech Stack Deployed</li>
+                    </ul>
+                    <aside class="notes">
+                        Speaker Notes:
+                        - Emphasize the reduction in CAC.
+                        - Mention the tech stack deployment was completed ahead of schedule.
+                    </aside>
+                </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script src="plugin/math/math.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-				controlsTutorial: true,
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX ]
-			});
-		</script>
-	</body>
+                <section>
+                    <h3>Algorithmic Projection</h3>
+                    <p>We utilized Python for risk modeling:</p>
+                    <pre><code class="python" data-trim data-noescape data-line-numbers="1|4-5|7">
+import pandas as pd
+import numpy as np
+
+# Calculate Volatility (Rolling Window)
+df['volatility'] = df['returns'].rolling(window=30).std()
+
+# Project Future Earnings
+projection = df['volatility'].mean() * capital_allocation
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>ROI Formula</h3>
+                    <p>Calculated using the standard financial model:</p>
+                    \[ ROI = \frac{Current Value - Cost of Investment}{Cost of Investment} \times 100 \]
+                    <br>
+                    <p>Continuous Compounding:</p>
+                    \[ A = Pe^{rt} \]
+                </section>
+
+                <section>
+                    <h3>Q&A</h3>
+                    <p>Thank you.</p>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                slideNumber: true, // Adds page numbers
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+            });
+        </script>
+    </body>
 </html>
