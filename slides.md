@@ -5,76 +5,68 @@ paginate: true
 math: mathjax
 size: 16:9
 style: |
-  /* Global Theme Specification */
+  /* Custom Theme Specification */
   section {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 26px;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
     padding: 50px;
     color: #333;
   }
   h1 {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
   }
-  code {
-    background-color: #f0f0f0;
-    padding: 2px 5px;
-    border-radius: 4px;
+  .highlight-box {
+    background-color: #f0f8ff;
+    border-left: 5px solid #3498db;
+    padding: 15px;
   }
 ---
 
-# Technical Documentation: Project API
-## Version 2.0 Deployment Strategy
+# Technical Documentation
+## Product Architecture V2
 
-**Maintainer:** Technical Writing Team
-**Email:** 24f3001410@ds.study.iitm.ac.in
-
----
-
-# Agenda
-
-1.  Architecture Overview
-2.  Complexity Analysis
-3.  Theme & Styling
-4.  Version Control
-
-> This documentation is designed to be converted to PDF/HTML via CI/CD.
+**Author Email:** 24f3001410@ds.study.iitm.ac.in
 
 ---
 
-# Custom Styling via Directives
+# 1. Custom Styling Directive
 
-This slide uses **Marp Directives** to override the global theme for a "Dark Mode" effect.
+This slide uses a **local Marp directive** (`_backgroundColor`) to change the slide color to a light cream, distinct from the global theme.
 
-* **Directive Used:** `_backgroundColor: #2c3e50`
-* **Directive Used:** `_color: white`
-
-This is useful for emphasis or distinct section breaks in your documentation.
+<div class="highlight-box">
+  Directives allow us to style specific slides without affecting the whole presentation.
+</div>
 
 ---
 
-![bg right:40%](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+![bg brightness:0.5](https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
 
-# Algorithmic Complexity
+# 2. Visuals & Backgrounds
 
-We utilize a revised sorting mechanism to improve data retrieval speeds.
+This slide uses the **image background directive** (`bg`) combined with a brightness filter.
 
-### Mathematical Model
+* High Contrast
+* Visual Impact
+* White Text (via directive)
 
-The time complexity $T(n)$ for the new algorithm is:
+---
+
+# 3. Algorithmic Complexity
+
+We use mathematical notation to define our system performance.
+
+### Time Complexity Equation
+The sorting algorithm runs in log-linear time:
 
 $$
-O(n \log n)
+T(n) = n \log n + O(n)
 $$
 
-Where $n$ represents the number of active records in the database.
+Where $n$ is the number of database records.
 
 ---
 
-# Maintenance Info
+# Thank You
 
-To update this presentation:
-
-1.  Edit `presentation.md`.
-2.  Push to the Git repository.
-3.  Contact **24f3001410@ds.study.iitm.ac.in** for merge conflicts.
+**Contact:** 24f3001410@ds.study.iitm.ac.in
