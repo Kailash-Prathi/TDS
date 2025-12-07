@@ -5,109 +5,76 @@ paginate: true
 math: mathjax
 size: 16:9
 style: |
-  /* Custom Theme Specification */
+  /* Global Theme Specification */
   section {
-    background-color: #fcfcfc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    padding: 50px;
     color: #333;
   }
   h1 {
-    color: #2c3e50;
-    font-size: 48px;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
   }
-  h2 {
-    color: #2980b9;
-  }
-  /* Custom Class for code slides */
-  section.technical {
-    background-color: #282c34;
-    color: #abb2bf;
-  }
-  section.technical h1, section.technical h2 {
-    color: #61afef;
-    border-color: #61afef;
-  }
-  /* Footer Styling */
-  footer {
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    font-size: 14px;
-    color: #7f8c8d;
+  code {
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 4px;
   }
 ---
 
-# Product Nebula
-## API & Architecture Documentation
-### Technical Overview Q4 2025
+# Technical Documentation: Project API
+## Version 2.0 Deployment Strategy
 
-<br>
-
-**Author:** Technical Writing Team
-**Contact:** 24f3001410@ds.study.iitm.ac.in
+**Maintainer:** Technical Writing Team
+**Email:** 24f3001410@ds.study.iitm.ac.in
 
 ---
 
 # Agenda
 
-1. System Architecture Overview
-2. Core Algorithms & Complexity
-3. Database Schema Changes
-4. Deployment Pipeline
+1.  Architecture Overview
+2.  Complexity Analysis
+3.  Theme & Styling
+4.  Version Control
 
-> "Good documentation is like a love letter that you write to your future self."
-
----
-
-![bg brightness:0.4](https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)
-
-# 1. System Architecture
-
-This release focuses on **microservices decoupling**. 
-
-We are moving away from the monolith to ensure:
-* Higher Availability
-* Independent Scaling
-* Fault Isolation
+> This documentation is designed to be converted to PDF/HTML via CI/CD.
 
 ---
 
-# 2. Algorithmic Complexity
+# Custom Styling via Directives
 
-We have optimized the search algorithm. The previous implementation had a complexity of $O(n^2)$, which caused latency spikes during high traffic.
+This slide uses **Marp Directives** to override the global theme for a "Dark Mode" effect.
 
-The new **Binary Search Tree** implementation ensures logarithmic time complexity.
+* **Directive Used:** `_backgroundColor: #2c3e50`
+* **Directive Used:** `_color: white`
 
-### Performance Equation
+This is useful for emphasis or distinct section breaks in your documentation.
 
-The total time complexity $T(n)$ for the new query engine is defined as:
+---
+
+![bg right:40%](https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+
+# Algorithmic Complexity
+
+We utilize a revised sorting mechanism to improve data retrieval speeds.
+
+### Mathematical Model
+
+The time complexity $T(n)$ for the new algorithm is:
 
 $$
-T(n) = \sum_{i=1}^{k} \log(n_i) + O(1)
+O(n \log n)
 $$
 
-Where:
-* $k$ is the number of concurrent shards.
-* $n$ is the dataset size.
+Where $n$ represents the number of active records in the database.
 
 ---
 
-# 3. Implementation Details
+# Maintenance Info
 
-We utilize **directive-based styling** (like this dark slide) to highlight code-heavy sections.
+To update this presentation:
 
-```python
-def optimize_query(data: list) -> int:
-    """
-    Optimized search using bisect module.
-    Complexity: O(log n)
-    """
-    import bisect
-    
-    data.sort()  # Timsort O(n log n)
-    breakpoint = bisect.bisect_left(data, 100)
-    
-    return breakpoint
+1.  Edit `presentation.md`.
+2.  Push to the Git repository.
+3.  Contact **24f3001410@ds.study.iitm.ac.in** for merge conflicts.
